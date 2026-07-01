@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bharat Yatra Hub — Premium tour packages across India's most breathtaking destinations. Manali, Kashmir, Shimla and beyond."
+    />
+    <title>Bharat Yatra Hub — India's Premium Travel Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+      <div class="nav-logo">Bharat Yatra Hub</div>
+      <button class="nav-burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#inclusions">Inclusions</a>
+        <a href="#book">Book</a>
+        <button class="nav-close" id="navClose" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+      <button
+        class="nav-cta"
+        onclick="
+          document.getElementById('book').scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        Begin Journey
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">India's Finest Landscapes</span>
+        <h1 class="hero-title">
+          Where every road leads<br /><em>to wonder</em>
+        </h1>
+        <p class="hero-sub">
+          Three legendary destinations. Manali, Kashmir, Shimla. Curated
+          packages with every detail handled — so you only have to feel it.
+        </p>
+        <div class="hero-actions">
+          <button
+            class="btn-primary"
+            onclick="
+              document
+                .getElementById('packages')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Explore All Packages
+          </button>
+          <button
+            class="btn-ghost"
+            onclick="
+              document
+                .getElementById('destinations')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            Our Destinations
+          </button>
+        </div>
+       
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+
+    <!-- DESTINATIONS STRIP -->
+    <section class="destinations section" id="destinations">
+      <div class="dest-inner">
+        <div class="reveal">
+          <span class="section-label">Where We Take You</span>
+          <h2 class="section-title">
+            Three destinations,<br /><em>infinite memories</em>
+          </h2>
+        </div>
+        <div class="dest-grid">
+          <div class="dest-card reveal" onclick="selectDestination('manali')">
+            <div
+              class="dest-img"
+              style="background-image: url(&quot;images/hero-manali.jpg&quot;)"
+            ></div>
+            <div class="dest-info">
+              <span class="dest-tag">Himachal Pradesh · 2,050m</span>
+              <h3 class="dest-name">Manali</h3>
+              <p class="dest-sub">Valley of Gods</p>
+              <p class="dest-desc">
+                Temples, hot springs, river rapids and snow-dusted valleys. A
+                transformation, not just a trip.
+              </p>
+              <div class="dest-meta">
+                <span>From ₹5,500</span>
+                <span>3N 4D</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="dest-card reveal reveal-delay-1"
+            onclick="selectDestination('kashmir')"
+          >
+            <div
+              class="dest-img"
+              style="background-image: url(&quot;images/hero-kashmir.jpg&quot;)"
+            ></div>
+            <div class="dest-info">
+              <span class="dest-tag">Jammu & Kashmir · 1,585m</span>
+              <h3 class="dest-name">Kashmir</h3>
+              <p class="dest-sub">Paradise on Earth</p>
+              <p class="dest-desc">
+                Mughal gardens, Gulmarg's slopes, Sonamarg's glaciers, and the
+                ethereal Dal Lake.
+              </p>
+              <div class="dest-meta">
+                <span>On Request</span>
+                <span>4N 5D</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="dest-card reveal reveal-delay-2"
+            onclick="selectDestination('shimla-manali')"
+          >
+            <div
+              class="dest-img"
+              style="background-image: url(&quot;images/hero-shimla.jpg&quot;)"
+            ></div>
+            <div class="dest-info">
+              <span class="dest-tag">Himachal Pradesh · 2,206m</span>
+              <h3 class="dest-name">Shimla + Manali</h3>
+              <p class="dest-sub">Queen of Hills Combo</p>
+              <p class="dest-desc">
+                The best of both worlds — Manali's adventure and Shimla's
+                colonial grandeur, in one journey.
+              </p>
+              <div class="dest-meta">
+                <span>From ₹9,000</span>
+                <span>6N 7D</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section class="packages section" id="packages">
+      <div class="pkg-inner">
+        <div class="pkg-header reveal">
+          <div>
+            <span class="section-label">Choose Your Journey</span>
+            <h2 class="section-title">
+              Pick a destination,<br /><em>pick your tier</em>
+            </h2>
+          </div>
+          <div class="pkg-tabs" id="pkgTabs">
+            <button class="pkg-tab active" onclick="switchDest('manali', this)">
+              Manali
+            </button>
+            <button class="pkg-tab" onclick="switchDest('kashmir', this)">
+              Kashmir
+            </button>
+            <button class="pkg-tab" onclick="switchDest('shimla-manali', this)">
+              Shimla + Manali
+            </button>
+          </div>
+        </div>
+
+        <!-- MANALI PACKAGES -->
+        <div class="pkg-panel active" id="panel-manali">
+          <p class="pkg-panel-note reveal">
+            3 Nights / 4 Days · Delhi Departure · AC Volvo Included
+          </p>
+          <div class="pkg-grid">
+            <div class="pkg-card reveal">
+              <span class="pkg-tier">Tier I</span>
+              <div class="pkg-name">Deluxe</div>
+              <div class="pkg-price">₹5,500<small>per person</small></div>
+              <p class="pkg-desc">
+                Your first taste of the Himalayas. Comfortable stays, curated
+                sightseeing, warm meals — everything handled.
+              </p>
+              <ul class="pkg-features">
+                <li>AC Volvo roundtrip from Delhi</li>
+                <li>3 nights hotel (double room, base category)</li>
+                <li>Daily breakfast &amp; dinner (MAP)</li>
+                <li>Private non-AC car transfers &amp; sightseeing</li>
+                <li>Manali city tour — Hadimba, Monastery, Vashisht</li>
+                <li>Solang Valley adventure day</li>
+                <li>Kullu–Manikaran day trip</li>
+              </ul>
+              <button
+                class="btn-ghost btn-full"
+                onclick="openBook('manali', 'Deluxe', '5500')"
+              >
+                Select Package
+              </button>
+            </div>
+            <div class="pkg-card pkg-featured reveal reveal-delay-1">
+              <div class="pkg-badge">Most Popular</div>
+              <span class="pkg-tier">Tier II</span>
+              <div class="pkg-name">Super Deluxe</div>
+              <div class="pkg-price">₹5,999<small>per person</small></div>
+              <p class="pkg-desc">
+                Elevated comfort meets mountain adventure. Upgraded rooms and
+                premium amenities for a richer experience.
+              </p>
+              <ul class="pkg-features">
+                <li>AC Volvo roundtrip from Delhi</li>
+                <li>3 nights in upgraded double room</li>
+                <li>Daily breakfast &amp; dinner (MAP)</li>
+                <li>Private non-AC car transfers &amp; sightseeing</li>
+                <li>Manali city tour — Hadimba, Monastery, Vashisht</li>
+                <li>Solang Valley adventure day</li>
+                <li>Kullu–Manikaran pilgrimage day</li>
+              </ul>
+              <button
+                class="btn-primary btn-full"
+                onclick="openBook('manali', 'Super Deluxe', '5999')"
+              >
+                Select Package
+              </button>
+            </div>
+            <div class="pkg-card reveal reveal-delay-2">
+              <span class="pkg-tier">Tier III</span>
+              <div class="pkg-name">Luxury</div>
+              <div class="pkg-price">₹7,000<small>per person</small></div>
+              <p class="pkg-desc">
+                The pinnacle of Himalayan travel. Premium accommodation, welcome
+                hamper, and a dedicated concierge.
+              </p>
+              <ul class="pkg-features">
+                <li>AC Volvo roundtrip from Delhi</li>
+                <li>3 nights in premium double room</li>
+                <li>Daily breakfast &amp; dinner (MAP)</li>
+                <li>Private car transfers &amp; sightseeing</li>
+                <li>Manali city tour — Hadimba, Monastery, Vashisht</li>
+                <li>Full Solang Valley experience</li>
+                <li>Kullu River Rafting corridor</li>
+              </ul>
+              <button
+                class="btn-ghost btn-full"
+                onclick="openBook('manali', 'Luxury', '7000')"
+              >
+                Select Package
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- KASHMIR PACKAGES -->
+        <div class="pkg-panel" id="panel-kashmir">
+          <p class="pkg-panel-note reveal">
+            4 Nights / 5 Days · Srinagar Airport Transfer Included
+          </p>
+          <div class="pkg-grid">
+            <div
+              class="pkg-card reveal"
+              style="grid-column: 1/-1; max-width: 700px; margin: 0 auto"
+            >
+              <span class="pkg-tier">Kashmir Package</span>
+              <div class="pkg-name">Paradise Escape</div>
+              <div class="pkg-price">
+                On Request<small style="font-size: 0.75rem">
+                  contact us for pricing</small
+                >
+              </div>
+              <p class="pkg-desc">
+                Five days through the crown of India — Mughal gardens, mountain
+                meadows, sacred valleys and the magical Dal Lake houseboat
+                experience.
+              </p>
+              <div class="itin-mini">
+                <div class="itin-mini-day">
+                  <span>Day 1</span>Srinagar Arrival + Mughal Gardens (Nishat,
+                  Shalimar, Chashme Shahi)
+                </div>
+                <div class="itin-mini-day">
+                  <span>Day 2</span>Gulmarg — Gondola ride, horse riding, snow
+                  adventures
+                </div>
+                <div class="itin-mini-day">
+                  <span>Day 3</span>Sonamarg — Sindh River, Thajiwas Glacier
+                  pony ride
+                </div>
+                <div class="itin-mini-day">
+                  <span>Day 4</span>Pahalgam — Lidder River, Aru / Betaab /
+                  Chandanwari valleys
+                </div>
+                <div class="itin-mini-day">
+                  <span>Day 5</span>Pahalgam → Srinagar Airport departure
+                </div>
+              </div>
+              <ul class="pkg-features" style="margin-top: 1.5rem">
+                <li>Airport pick-up &amp; drop, Srinagar</li>
+                <li>Accommodation on double sharing basis</li>
+                <li>1-hour Shikara ride on Dal Lake</li>
+                <li>Daily breakfast &amp; dinner</li>
+                <li>All transfers &amp; sightseeing by non-AC cab</li>
+                <li>Driver, toll, parking, fuel &amp; permit charges</li>
+              </ul>
+              <button
+                class="btn-primary btn-full"
+                style="margin-top: 2rem"
+                onclick="openBook('kashmir', 'Paradise Escape', 'contact')"
+              >
+                Enquire &amp; Book
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHIMLA + MANALI PACKAGES -->
+        <div class="pkg-panel" id="panel-shimla-manali">
+          <p class="pkg-panel-note reveal">
+            6 Nights / 7 Days · Delhi Round-Trip Volvo Included
+          </p>
+          <div class="pkg-grid">
+            <div class="pkg-card reveal">
+              <span class="pkg-tier">Tier I</span>
+              <div class="pkg-name">Deluxe</div>
+              <div class="pkg-price">₹9,000<small>per person</small></div>
+              <p class="pkg-desc">
+                The classic combo — Manali's adventure peaks and Shimla's
+                heritage hill town, connected in one seamless week.
+              </p>
+              <ul class="pkg-features">
+                <li>Roundtrip AC Volvo from Delhi</li>
+                <li>5 nights hotel — double room, base category</li>
+                <li>5 breakfasts &amp; 5 dinners (MAP)</li>
+                <li>Manali: Hadimba, Monastery, Vashisht, Mall Road</li>
+                <li>Solang Valley / Atal Tunnel day</li>
+                <li>Kullu–Naggar: Rafting, Naggar Castle, Roerich Gallery</li>
+                <li>Shimla: Kufri + Snow Kingdom + local sightseeing</li>
+                <li>Non-AC private car + sharing Manali–Shimla bus</li>
+              </ul>
+              <button
+                class="btn-ghost btn-full"
+                onclick="openBook('shimla-manali', 'Deluxe', '9000')"
+              >
+                Select Package
+              </button>
+            </div>
+            <div class="pkg-card pkg-featured reveal reveal-delay-1">
+              <div class="pkg-badge">Best Value</div>
+              <span class="pkg-tier">Tier II</span>
+              <div class="pkg-name">Super Deluxe</div>
+              <div class="pkg-price">₹10,500<small>per person</small></div>
+              <p class="pkg-desc">
+                Seven days of pure discovery in upgraded comfort. From Manali's
+                rivers to Shimla's Ridge, every stay elevated.
+              </p>
+              <ul class="pkg-features">
+                <li>Roundtrip AC Volvo from Delhi</li>
+                <li>5 nights in upgraded double room</li>
+                <li>5 breakfasts &amp; 5 dinners (MAP)</li>
+                <li>Manali: Hadimba, Monastery, Vashisht, Mall Road</li>
+                <li>Solang Valley / Atal Tunnel day</li>
+                <li>Kullu–Naggar: Rafting, Naggar Castle, Roerich Gallery</li>
+                <li>Shimla: Kufri + Snow Kingdom + Heritage Circuit</li>
+                <li>Non-AC private car + sharing Manali–Shimla bus</li>
+              </ul>
+              <button
+                class="btn-primary btn-full"
+                onclick="openBook('shimla-manali', 'Super Deluxe', '10500')"
+              >
+                Select Package
+              </button>
+            </div>
+            <div class="pkg-card reveal reveal-delay-2">
+              <span class="pkg-tier">Tier III</span>
+              <div class="pkg-name">Luxury</div>
+              <div class="pkg-price">₹12,500<small>per person</small></div>
+              <p class="pkg-desc">
+                A week in the mountains at its most indulgent. Premium stays,
+                priority service, and a curated journey through two Himalayan
+                jewels.
+              </p>
+              <ul class="pkg-features">
+                <li>Roundtrip AC Volvo from Delhi</li>
+                <li>5 nights in premium / 4-star hotel</li>
+                <li>5 breakfasts &amp; 5 dinners (MAP)</li>
+                <li>All Manali &amp; Shimla highlights</li>
+                <li>Solang Valley full experience</li>
+                <li>Kullu rafting + Naggar Castle + Roerich Gallery</li>
+                <li>Kufri Snow Kingdom + complete Shimla Heritage Circuit</li>
+                <li>Private AC car + cab Manali–Shimla</li>
+              </ul>
+              <button
+                class="btn-ghost btn-full"
+                onclick="openBook('shimla-manali', 'Luxury', '12500')"
+              >
+                Select Package
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX DIVIDER 1 -->
+    <div class="parallax-divider">
+      <div
+        class="parallax-img"
+        id="parallax1"
+        style="background-image: url(&quot;images/para-valley.jpg&quot;)"
+      ></div>
+      <div class="parallax-caption">Every mile, a memory</div>
+    </div>
+
+    <!-- ITINERARY SECTION -->
+    <section class="itinerary section" id="itinerary">
+      <div class="itin-inner">
+        <div class="itin-header reveal">
+          <div>
+            <span class="section-label">Day by Day</span>
+            <h2 class="section-title">Your story,<br /><em>unfolding</em></h2>
+          </div>
+          <div class="itin-tabs" id="itinTabs">
+            <button
+              class="itin-tab active"
+              onclick="switchItin('manali', this)"
+            >
+              Manali
+            </button>
+            <button class="itin-tab" onclick="switchItin('kashmir', this)">
+              Kashmir
+            </button>
+            <button
+              class="itin-tab"
+              onclick="switchItin('shimla-manali', this)"
+            >
+              Shimla + Manali
+            </button>
+          </div>
+        </div>
+
+        <!-- MANALI ITINERARY -->
+        <div class="itin-panel active" id="itin-manali">
+          <div class="itin-days">
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">01</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Delhi → Manali · 530 km</div>
+                <div class="day-title">The Overnight Passage</div>
+                <p class="day-desc">
+                  Your adventure begins at the Delhi Volvo pick-up point. As
+                  city lights fade, the Himalayas begin their quiet call. Sleep
+                  through the night and wake to sparkling mountain air.
+                </p>
+                <span class="day-service">Volvo AC overnight coach</span>
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">02</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Manali Local Tour · 3–4 hrs</div>
+                <div class="day-title">Temples, Springs &amp; Mall Road</div>
+                <p class="day-desc">
+                  Greeted by our team at Manali stop. Check-in at 12:00 noon,
+                  then an afternoon of discovery — Hadimba Mata Temple,
+                  Ghatotkacha Temple, Club House, Tibetan Monastery, healing
+                  Vashisht Hot Springs, and the lively Mall Road.
+                </p>
+                <span class="day-service">Hotel · Dinner · Car</span>
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">03</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Solang Valley · 15 km from Manali</div>
+                <div class="day-title">The Valley of Adventure</div>
+                <p class="day-desc">
+                  Head to Solang Valley — nature's ultimate adventure
+                  playground. Paragliding, zorbing, ATV rides, horse riding, and
+                  trail treks against a backdrop of snow-capped peaks. Optional:
+                  Atal Tunnel drive (extra cost).
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Car</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">04</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Kullu · Manikaran · 80 km</div>
+                <div class="day-title">Rivers, Rapids &amp; Sacred Springs</div>
+                <p class="day-desc">
+                  Drive through Kullu for white-water river rafting on the Beas,
+                  halt at Devlok Manali and Pashmina showrooms, then journey to
+                  Manikaran — sacred hot springs, the revered Gurudwara, and
+                  temples of Rama, Krishna and Vishnu. The Langar nourishes body
+                  and soul.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Car</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">05</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Manali → Delhi · Departure</div>
+                <div class="day-title">The Journey Home</div>
+                <p class="day-desc">
+                  A final morning on Mall Road — souvenirs, Van Vihar Park
+                  strolls, and quiet reflection. Store luggage at BBH Cloakroom.
+                  Your Volvo departs; the mountains bid farewell until next
+                  time.
+                </p>
+                <span class="day-service">Breakfast · Volvo AC coach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- KASHMIR ITINERARY -->
+        <div class="itin-panel" id="itin-kashmir">
+          <div class="itin-days">
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">01</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Srinagar Airport Arrival</div>
+                <div class="day-title">Welcome to Paradise</div>
+                <p class="day-desc">
+                  Our representative greets you at Srinagar Airport and
+                  transfers you to your hotel. After freshening up, explore the
+                  famous Mughal Gardens — Nishat Bagh (Garden of Pleasure),
+                  Shalimar Bagh (Abode of Love), and Chashme Shahi with its
+                  natural spring water. Dinner and overnight stay in Srinagar.
+                </p>
+                <span class="day-service"
+                  >Hotel · Dinner · Airport Transfer</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">02</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Gulmarg · Full Day Excursion</div>
+                <div class="day-title">Meadows of Gold &amp; Gondola Skies</div>
+                <p class="day-desc">
+                  A full-day in Gulmarg — lush green meadows framed by
+                  snow-capped peaks. Ride the famous Gulmarg Gondola (own cost),
+                  explore on horseback, or embrace seasonal snow adventures.
+                  Return to Srinagar by evening.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Cab</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">03</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Sonamarg · Meadow of Gold</div>
+                <div class="day-title">Glaciers &amp; the Sindh River</div>
+                <p class="day-desc">
+                  Drive to Sonamarg and witness breathtaking Himalayan
+                  landscapes, glaciers, and the roaring Sindh River. Optional
+                  pony ride to Thajiwas Glacier (own cost) and Zero Point
+                  sightseeing. Return to Srinagar by evening.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Cab</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">04</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Pahalgam · Valley of Shepherds</div>
+                <div class="day-title">Saffron Fields &amp; Sacred Valleys</div>
+                <p class="day-desc">
+                  Drive to Pahalgam. En route, visit saffron fields and the
+                  historic Awantipora Ruins. Explore Lidder River and the scenic
+                  valleys — Aru Valley, Betaab Valley, and Chandanwari (local
+                  union taxi, own cost). Overnight in Pahalgam.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Cab</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">05</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Pahalgam → Srinagar · Departure</div>
+                <div class="day-title">Until Kashmir Calls Again</div>
+                <p class="day-desc">
+                  After breakfast, drive back to Srinagar and transfer to the
+                  airport for your onward journey. Carry with you beautiful
+                  memories of the Valley of Paradise.
+                </p>
+                <span class="day-service">Breakfast · Airport Drop · Cab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHIMLA + MANALI ITINERARY -->
+        <div class="itin-panel" id="itin-shimla-manali">
+          <div class="itin-days">
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">01</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Delhi → Manali · 530 km</div>
+                <div class="day-title">The Overnight Passage</div>
+                <p class="day-desc">
+                  Board your Volvo in Delhi as the city fades into the night.
+                  The highway winds north through the plains and into the
+                  mountains. Wake to crisp Himalayan air in Manali.
+                </p>
+                <span class="day-service">Volvo AC overnight coach</span>
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">02</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Manali City Tour</div>
+                <div class="day-title">Temples, Springs &amp; Mall Road</div>
+                <p class="day-desc">
+                  Check in at noon, then afternoon sightseeing: Hadimba Mata
+                  Temple, Ghatotkacha Temple, Club House, Tibetan Monastery,
+                  healing Vashisht Hot Springs, and the vibrant Mall Road in the
+                  evening.
+                </p>
+                <span class="day-service">Hotel · Dinner · Car</span>
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">03</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Solang Valley / Atal Tunnel</div>
+                <div class="day-title">Adventure Above the Clouds</div>
+                <p class="day-desc">
+                  Solang Valley for paragliding, zorbing, ATV rides and horse
+                  riding. Or opt for a drive through Atal Tunnel — one of the
+                  world's highest tunnels — into the Lahaul &amp; Spiti Valley
+                  (extra cost, inform at booking).
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Car</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">04</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Kullu → Naggar · 20–40 km</div>
+                <div class="day-title">Rafting, Castles &amp; Russian Art</div>
+                <p class="day-desc">
+                  Drive to Kullu for white-water river rafting on the Beas. Stop
+                  at Devlok Manali and Pashmina showrooms, then head to Naggar
+                  Castle — former seat of Kullu kings, now a heritage landmark.
+                  Visit the Roerich Art Gallery and glimpse Tripura Sundri
+                  Temple (one of India's 51 Shakti Peethas) enroute. Freshen up
+                  at a Trout Fish Farm on the way back. Note: Roerich Gallery
+                  closed Mondays.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Car</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">05</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Manali → Shimla · 240 km · 7–8 hrs</div>
+                <div class="day-title">Heading to the Queen of Hills</div>
+                <p class="day-desc">
+                  After breakfast, check out from Manali and board a sharing
+                  deluxe bus or cab to Shimla. En route, stop at Mata Vaishno
+                  Devi Temple in Kullu and admire the grand Pandoh Dam. Check in
+                  at Shimla hotel for dinner and rest.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Sharing Bus/Cab</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">06</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">
+                  Kufri + Snow Kingdom + Shimla Heritage
+                </div>
+                <div class="day-title">Thrills &amp; Colonial Grandeur</div>
+                <p class="day-desc">
+                  Morning at Kufri and Snow Kingdom — horse riding, yak riding,
+                  zip-lining, tobogganing and cycling. Afternoon in Shimla's
+                  iconic heart: Scandal Point, The Ridge, Gaiety Theatre,
+                  Heritage Museum, Lakkar Bazaar, Rani Jhansi Park and Christ
+                  Church.
+                </p>
+                <span class="day-service"
+                  >Hotel · Breakfast · Dinner · Car</span
+                >
+              </div>
+            </div>
+            <div class="itin-day reveal">
+              <div class="day-left">
+                <div class="day-num">07</div>
+                <div class="day-label">Day</div>
+              </div>
+              <div class="day-right">
+                <div class="day-route">Shimla → Delhi · Daytime Journey</div>
+                <div class="day-title">The Journey Home</div>
+                <p class="day-desc">
+                  After breakfast, check out and head to the Volvo stand for
+                  your daytime journey back to Delhi. Seven days of mountains,
+                  memories and magic — safely, beautifully delivered.
+                </p>
+                <span class="day-service">Breakfast · Volvo AC coach</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX DIVIDER 2 -->
+    <div class="parallax-divider">
+      <div
+        class="parallax-img"
+        id="parallax2"
+        style="background-image: url(&quot;images/para-snow.jpg&quot;)"
+      ></div>
+      <div class="parallax-caption">
+        Mountains don't care about your worries — and neither will you
+      </div>
+    </div>
+
+    <!-- INCLUSIONS -->
+    <section class="inclusions section" id="inclusions">
+      <div class="inc-inner">
+        <div class="reveal">
+          <span class="section-label">Full Transparency</span>
+          <h2 class="section-title">What's in every<br /><em>package</em></h2>
+        </div>
+        <div class="inc-tabs" id="incTabs">
+          <button class="inc-tab active" onclick="switchInc('manali', this)">
+            Manali
+          </button>
+          <button class="inc-tab" onclick="switchInc('kashmir', this)">
+            Kashmir
+          </button>
+          <button class="inc-tab" onclick="switchInc('shimla-manali', this)">
+            Shimla + Manali
+          </button>
+        </div>
+
+        <!-- MANALI INCLUSIONS -->
+        <div class="inc-panel active" id="inc-manali">
+          <div class="inc-grid">
+            <div class="inc-col reveal">
+              <h3>Included</h3>
+              <ul class="inc-list">
+                <li>
+                  <span class="inc-check">✦</span>Roundtrip AC Volvo tickets for
+                  2 passengers (Delhi)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Pick-up &amp; drop from Manali
+                  Volvo stop to hotel &amp; return
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>3 nights hotel in double room
+                  (base category)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>MAP: 3 breakfasts &amp; 3
+                  dinners as per itinerary
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>All transfers &amp;
+                  sightseeing by private non-AC vehicle
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Transfer taxes, parking, fuel
+                  &amp; driver charges
+                </li>
+              </ul>
+            </div>
+            <div class="inc-col reveal reveal-delay-1">
+              <h3>Not Included</h3>
+              <ul class="inc-list">
+                <li>
+                  <span class="exc-x">○</span>Flights, trains, or other
+                  transport to Delhi
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Monument entrance &amp; camera
+                  fees
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Personal expenses (laundry,
+                  shopping, tips)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Adventure activities —
+                  paragliding, rafting, zorbing (own expense)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Atal Tunnel / Rohtang Pass visit
+                  (extra cost)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Winter 4×4 jeep charges during
+                  snowfall
+                </li>
+                <li>
+                  <span class="exc-x">○</span>5% GST on total package cost
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- KASHMIR INCLUSIONS -->
+        <div class="inc-panel" id="inc-kashmir">
+          <div class="inc-grid">
+            <div class="inc-col reveal">
+              <h3>Included</h3>
+              <ul class="inc-list">
+                <li>
+                  <span class="inc-check">✦</span>Pick-up &amp; drop from
+                  Srinagar International Airport
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Accommodation on double
+                  sharing basis
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>1-hour Shikara ride on Dal
+                  Lake (once during stay)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Daily breakfast &amp; dinner
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>All transfers &amp;
+                  sightseeing by non-AC cab
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Driver allowance, toll,
+                  parking, road tax, fuel &amp; permit charges
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Check-in / checkout 12:00 noon
+                  at all hotels
+                </li>
+              </ul>
+            </div>
+            <div class="inc-col reveal reveal-delay-1">
+              <h3>Not Included</h3>
+              <ul class="inc-list">
+                <li><span class="exc-x">○</span>Flights, trains, ferries</li>
+                <li>
+                  <span class="exc-x">○</span>All garden &amp; monument entry
+                  fees, room heater
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Personal expenses (laundry,
+                  shopping, tips)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Gondola tickets at Gulmarg (own
+                  expense)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Pony rides (Thajiwas Glacier,
+                  Baisaran, Pahalgam)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Aru / Betaab / Chandanwari valleys
+                  (local taxi at own cost)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Zero Point sightseeing at Sonamarg
+                  (union vehicle, own cost)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Chain vehicle / snow cab during
+                  heavy snowfall
+                </li>
+                <li>
+                  <span class="exc-x">○</span>5% GST on total package cost
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SHIMLA + MANALI INCLUSIONS -->
+        <div class="inc-panel" id="inc-shimla-manali">
+          <div class="inc-grid">
+            <div class="inc-col reveal">
+              <h3>Included</h3>
+              <ul class="inc-list">
+                <li>
+                  <span class="inc-check">✦</span>Roundtrip AC Volvo tickets
+                  (Delhi)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Pick-up &amp; drop from bus
+                  stop to hotel &amp; return
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>5 nights hotel, double
+                  occupancy (2 adults, base category)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>MAP: 5 breakfasts &amp; 5
+                  dinners (first dinner, last breakfast)
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Transfers &amp; sightseeing by
+                  private non-AC sedan
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Sharing deluxe bus / cab,
+                  Manali → Shimla
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>NGT terms apply for all
+                  vehicles in Himachal
+                </li>
+                <li>
+                  <span class="inc-check">✦</span>Transfer taxes, parking, fuel
+                  &amp; driver charges
+                </li>
+              </ul>
+            </div>
+            <div class="inc-col reveal reveal-delay-1">
+              <h3>Not Included</h3>
+              <ul class="inc-list">
+                <li><span class="exc-x">○</span>Flights, trains, ferries</li>
+                <li>
+                  <span class="exc-x">○</span>Monument entrance &amp; camera
+                  fees
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Personal expenses (laundry,
+                  shopping, tips)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Adventure activities (paragliding,
+                  rafting, zorbing)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Atal Tunnel / Sissu / Rohtang Pass
+                  (extra cost)
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Volvo luggage charges, heater,
+                  extra meals
+                </li>
+                <li>
+                  <span class="exc-x">○</span>Winter 4×4 jeep charges during
+                  snowfall
+                </li>
+                <li>
+                  <span class="exc-x">○</span>5% GST on total package cost
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Policy -->
+        <div class="payment-policy reveal">
+          <h3>Payment Policy</h3>
+          <div class="payment-grid">
+            <div class="pay-item">
+              <span class="pay-label">Himachal Packages</span>
+              <div class="pay-val">
+                50% advance at booking · 50% on arrival (Day 1)
+              </div>
+            </div>
+            <div class="pay-item">
+              <span class="pay-label">4★ / 5★ Hotels</span>
+              <div class="pay-val">100% payment required at booking</div>
+            </div>
+            <div class="pay-item">
+              <span class="pay-label">International Packages</span>
+              <div class="pay-val">100% advance required at booking</div>
+            </div>
+            <div class="pay-item">
+              <span class="pay-label">Flights &amp; Trains</span>
+              <div class="pay-val">100% advance required at booking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="booking section" id="book">
+      <div
+        class="booking-bg"
+        style="background-image: url(&quot;images/para-valley.jpg&quot;)"
+      ></div>
+      <div class="booking-inner reveal">
+        <span class="section-label">Reserve Your Passage</span>
+        <h2 class="section-title">The mountains<br /><em>are waiting</em></h2>
+        <p class="booking-desc">
+          Tell us about your dream journey — our team will confirm within 24
+          hours and guide you through every step.
+        </p>
+
+        <form
+          class="booking-form"
+          id="bookingForm"
+          onsubmit="submitBooking(event)"
+        >
+          <div class="form-row">
+            <div class="form-group">
+              <label>Destination *</label>
+              <select id="bookDest" required>
+                <option value="">Select destination</option>
+                <option value="manali">Manali (3N 4D)</option>
+                <option value="kashmir">Kashmir (4N 5D)</option>
+                <option value="shimla-manali">Shimla + Manali (6N 7D)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Package Tier *</label>
+              <select id="bookTier" required>
+                <option value="">Select tier</option>
+                <option value="Deluxe">Deluxe</option>
+                <option value="Super Deluxe">Super Deluxe</option>
+                <option value="Luxury">Luxury</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input
+                type="text"
+                id="bookName"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input
+                type="tel"
+                id="bookPhone"
+                placeholder="+91 98765 43210"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Number of Travellers</label>
+              <div class="counter-row">
+                <div class="counter-item">
+                  <span>Adults</span>
+                  <div class="counter-controls">
+                    <button type="button" onclick="adjustCount('adults', -1)">
+                      −
+                    </button>
+                    <span id="adults-count">2</span>
+                    <button type="button" onclick="adjustCount('adults', 1)">
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div class="counter-item">
+                  <span>Children</span>
+                  <div class="counter-controls">
+                    <button type="button" onclick="adjustCount('children', -1)">
+                      −
+                    </button>
+                    <span id="children-count">0</span>
+                    <button type="button" onclick="adjustCount('children', 1)">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Preferred Travel Month</label>
+              <input type="text" id="bookMonth" placeholder="e.g. June 2025" />
+            </div>
+          </div>
+          <div class="form-group form-group-full">
+            <label>Special Requests / Notes</label>
+            <textarea
+              id="bookNotes"
+              rows="3"
+              placeholder="Honeymoon, dietary requirements, room preferences, group details..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">
+            Confirm My Journey →
+          </button>
+        </form>
+
+        <div class="booking-success" id="bookingSuccess" style="display: none">
+          <div class="success-icon">✓</div>
+          <h3>Booking request received!</h3>
+          <p>
+            Our travel expert will call you within 24 hours to confirm your
+            journey.
+          </p>
+          <button class="btn-ghost" onclick="resetBooking()">
+            Book Another Journey
+          </button>
+        </div>
+
+        <p class="booking-note">
+          Note: River Rafting &amp; Paragliding subject to weather conditions.
+          Adventure activities at own expense. 5% GST applicable on all
+          packages.
+        </p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-logo">Bharat Yatra Hub</div>
+      <div class="footer-center">
+        <div class="footer-tagline">
+          "Tour ends, but sweet memories always remain."
+        </div>
+        <div class="footer-links">
+          <a href="#destinations">Destinations</a>
+          <a href="#packages">Packages</a>
+          <a href="#itinerary">Itinerary</a>
+          <a href="#book">Book</a>
+        </div>
+      </div>
+      <div class="footer-note">
+        <p>📞 <a href="tel:+919317573821">+91 93175 73821</a></p>
+        <p>💬 WhatsApp Available</p>
+
+        © 2026 Bharat Yatra Hub · India<br />
+        <small>5% GST applicable on all packages</small>
+      </div>
+    </footer>
+
+    <!-- BOOKING MODAL (pre-fill from card clicks) -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+      <div class="modal" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <h3 class="modal-title">Start Your Journey</h3>
+        <p class="modal-sub" id="modalSub"></p>
+        <form onsubmit="submitModal(event)">
+          <div class="form-group">
+            <label>Name *</label
+            ><input
+              type="text"
+              id="modalName"
+              required
+              placeholder="Your full name"
+            />
+          </div>
+          <div class="form-group">
+            <label>Phone *</label
+            ><input
+              type="tel"
+              id="modalPhone"
+              required
+              placeholder="+91 98765 43210"
+            />
+          </div>
+          <div class="form-group">
+            <label>Travel Month</label
+            ><input type="text" id="modalMonth" placeholder="e.g. June 2025" />
+          </div>
+          <button
+            type="submit"
+            class="btn-primary btn-full"
+            style="margin-top: 1.5rem"
+          >
+            Send Booking Request →
+          </button>
+        </form>
+      </div>
+    </div>
+ <a
+  href="https://wa.me/919317573821"
+  class="floating-whatsapp"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="currentColor">
+        <path d="M16 3C8.82 3 3 8.82 3 16c0 2.53.72 4.98 2.08 7.09L3 29l6.11-2.03A12.93 12.93 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.5c-2.13 0-4.12-.63-5.8-1.72l-.42-.27-3.63 1.2 1.2-3.53-.28-.45A10.4 10.4 0 1 1 16 26.5z"/>
+    </svg>
+</a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
