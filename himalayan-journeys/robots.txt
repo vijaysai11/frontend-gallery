@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bharatyatrahub.vercel.app/
+Sitemap: https://bharatyatrahub.vercel.app/sitemap.xml
